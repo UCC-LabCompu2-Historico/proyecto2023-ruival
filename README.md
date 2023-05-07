@@ -46,7 +46,7 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
   color de fondo, algún logotipo, etc.
 - [X] Debe haber por lo menos una etiqueta ```<img>``` en la página.
 - [X] La estructura de la página debe estar definida con ```<div></div>```
-- [ ] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al
+- [X] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al
   usuario ingresar valores para poder realizar un cálculo de un ejercicio.
 - [ ] Debe contener un ```<canvas>```, para que posteriormente (en la 2da etapa) se grafique alguna imagen
   representativa del ejercicio. (el desarrollo del gráfico se realizará cuando se vea la unidad de “Orientación a
