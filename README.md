@@ -23,7 +23,7 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 - [] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe
   haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
-- [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear *
+- [X] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear *
   *.gitignore**)
 
 ### Sobre el Proyecto General
@@ -31,9 +31,9 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 - [X] La página principal debe llamarse index
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
+- [X] Se debe emplear algún favicon
 - [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
-- [ ] Debe haber navegación entre todas las páginas
+- [X] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML
 
@@ -58,18 +58,18 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 
 ### Sobre el CSS
 
-- [ ] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos
+- [X] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos
   o emplear estilos incrustados).
-- [ ] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
-- [ ] Se debe emplear pseudoclase
-- [ ] No emplear !important
+- [X] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
+- [X] Se debe emplear pseudoclase
+- [X] No emplear !important
 
 ### Sobre Accesibilidad:
 
-- [ ] Toda imagen debe tener su etiqueta alt
+- [X] Toda imagen debe tener su etiqueta alt
 - [ ] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
 - [ ] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia)
-- [ ] Si hay una tabla en la página, debe contener ```<caption></caption>```
+- [X] Si hay una tabla en la página, debe contener ```<caption></caption>```
 
 ### Sobre las correcciones
 
