@@ -3,10 +3,14 @@ h1 {
     font-size: 90px;
     text-align: center;
 }
-
-body {
-    font-size: 20px;
+body{
     background-color: mistyrose;
+}
+section {
+    font-size: 20px;
+    column-count: 2;
+    column-gap: 30px;
+    margin: 20px;
 }
 div.especial h4{
     font-weight: lighter;
