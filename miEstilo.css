@@ -31,6 +31,7 @@ a:active {
 
 #principal {
     width: 80px;
-    float: right;
+    float: left;
     border-radius: 50%;
+    margin: 20px;
 }
