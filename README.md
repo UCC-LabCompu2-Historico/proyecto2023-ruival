@@ -2,6 +2,8 @@
 
 Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 
+Link al sitio: [Ejercicios MRU](https://ucc-labcompu2.github.io/proyecto2023-ruival/)
+
 ## Autores
 
 * Ruival, María
