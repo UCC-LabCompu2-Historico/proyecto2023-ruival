@@ -67,8 +67,8 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 ### Sobre Accesibilidad:
 
 - [X] Toda imagen debe tener su etiqueta alt
-- [ ] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
-- [ ] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia)
+- [X] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
+- [X] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia)
 - [X] Si hay una tabla en la página, debe contener ```<caption></caption>```
 
 ### Sobre las correcciones
