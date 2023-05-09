@@ -1,3 +1,4 @@
+
 h1 {
     color: #f83737;
     font-size: 90px;
@@ -5,6 +6,7 @@ h1 {
 }
 body{
     background-color: mistyrose;
+    font-family: 'genos', sans-serif;
 }
 section {
     font-size: 20px;

@@ -32,13 +32,13 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [X] Se debe emplear algún favicon
-- [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
+- [X] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [X] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML
 
-- [ ] Todas las etiquetas deben estar en minúscula
-- [ ] Poner comillas a todos los atributos
+- [X] Todas las etiquetas deben estar en minúscula
+- [X] Poner comillas a todos los atributos
 - [X] Title debe contener el título de la página
 - [X] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
 - [X] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
@@ -51,10 +51,10 @@ Esta es una página referente al Movimiento Rectilíneo Uniforme (MRU)
 - [X] Debe contener un ```<canvas>```, para que posteriormente (en la 2da etapa) se grafique alguna imagen
   representativa del ejercicio. (el desarrollo del gráfico se realizará cuando se vea la unidad de “Orientación a
   Eventos”)
-- [ ] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
-- [ ] No utilizar etiquetas deprecadas.
-- [ ] Todas las etiquetas deben estar correctamente cerradas
-- [ ] Los ids de los elementos deben ser unívocos
+- [X] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
+- [X] No utilizar etiquetas deprecadas.
+- [X] Todas las etiquetas deben estar correctamente cerradas
+- [X] Los ids de los elementos deben ser unívocos
 
 ### Sobre el CSS
 
