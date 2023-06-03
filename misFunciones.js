@@ -25,6 +25,17 @@ function calcular(){
             document.getElementById("resul").innerHTML = `La velocidad es:${resul} m`;
         }else{
             alert('Por favor, ingresa los valores numéricos para velocidad, tiempo y distancia');
+            if (isNaN(distancia)) {
+                document.getElementById('distancia').value = '';
+            }
+
+            if (isNaN(velocidad)) {
+                document.getElementById('velocidad').value = '';
+            }
+
+            if (isNaN(tiempo)) {
+                document.getElementById('tiempo').value = '';
+            }
         }
     }
 }
