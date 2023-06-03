@@ -5,24 +5,26 @@
  * @param Parámetro B
  * @return Valor que retorna
  */
-function cargarWeb(){
-    var num1, num2, incog, urlComp;
-    incog = document.getElementById("calcular").value;
-    if(incog=="distancia"){
-        incog = num1 * num2;
-    }else if(incog=="tiempo"){
-        incog = num1 / num2;
-    }else if(incog=="velocidad"){
-        incog = num1 / num2;
+function calcular(){
+    const calculo = document.getElementById("calcular").value;
+    const distancia = document.getElementById("distancia").value;
+    const tiempo = document.getElementById("tiempo").value;
+    const velocidad = document.getElementById("velocidad").value;
+
+    if(!isNaN(distancia) && !isNaN(tiempo) && !isNaN(velocidad)){
+        let resultado;
+
+        if(calculo=="velocidad"){
+            resultado = distancia/tiempo;
+            document.getElementById("resul").innerHTML = `La velocidad es:${resul} m/s`;
+        }else if(calculo=="tiempo"){
+            resultado = distancia/velocidad;
+            document.getElementById("resul").innerHTML = `El tiempo es:${resul} s`;
+        }else if(calculo=="distancia"){
+            resultado = velocidad*tiempo;
+            document.getElementById("resul").innerHTML = `La velocidad es:${resul} m`;
+        }else{
+            alert('Por favor, ingresa los valores numéricos para velocidad, tiempo y distancia');
+        }
     }
-    urlComp = "en_movimiento_2.html #" + incog + "#";
-    window.open(urlComp);
-}
-
-function cargarResultado(){
-    var urlComp, inc;
-    urlComp = window.location.href.split("/").[5];
-    inc = urlComp.split("/").[1];
-
-    document.getElementById("resul").value = inc;
 }

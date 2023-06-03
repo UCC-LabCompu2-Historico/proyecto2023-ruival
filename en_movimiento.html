@@ -38,19 +38,23 @@
         </p>
         <p>
             <label for="distancia">Distancia: </label> <input type="number" name="distancia"
-                                                              placeholder="ingresa distancia en m" id="distancia">
+                                                              placeholder="ingresa distancia (metros)" id="distancia">
         </p>
         <p>
-            <label for="tiempo">Tiempo: </label> <input type="number" name="tiempo" placeholder="ingresa tiempo en s"
+            <label for="tiempo">Tiempo: </label> <input type="number" name="tiempo" placeholder="ingresa tiempo (segs)"
                                                         id="tiempo">
         </p>
         <p>
             <label for="velocidad">Velocidad: </label> <input type="number" name="velocidad"
-                                                              placeholder="ingresa velocidad en m/s" id="velocidad">
+                                                              placeholder="ingresa velocidad (m/s))" id="velocidad">
         </p>
 
         <p>
-            <button onclick="cargarWeb()">Calcular</button>
+            <button onclick="calcular()">Calcular</button>
+        </p>
+        <p>
+            El resultado es
+            <label for="resul"></label> <input id="resul" type="text" name="inp_resul" disabled>
         </p>
     </form>
     <canvas id="img_enmovimiento">
