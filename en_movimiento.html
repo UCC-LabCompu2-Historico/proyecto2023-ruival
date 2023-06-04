@@ -13,7 +13,7 @@
     <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 
-<body>
+<body onload="setInterval(animarAuto, 10)">
 <img id="principal" src="imagenes/logo.jpg" alt="logo">
 <header><h1>Me Estoy Moviendo</h1></header>
 <section>
@@ -57,7 +57,7 @@
             <label for="resul"></label> <input id="resul" type="text" name="inp_resul" disabled>
         </p>
     </form>
-    <canvas id="img_enmovimiento">
+    <canvas id="img_enmovimiento" id="myCanvas" class="move" width="1000px" height="500px">
         El navegador no soporta canvas
     </canvas>
 </section>

@@ -42,3 +42,24 @@ function calcular() {
         alert("Por favor, ingresa valores numéricos para velocidad, tiempo y distancia.");
     }
 }
+
+let x = 0;
+const dx = 2;
+function animarAuto() {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+
+    const img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x, 100);
+    };
+
+    if (x > canvas.width) {
+        x = 0;
+    }
+    x += dx;
+}
