@@ -5,37 +5,40 @@
  * @param Parámetro B
  * @return Valor que retorna
  */
-function calcular(){
+function calcular() {
     const calculo = document.getElementById("calcular").value;
     const distancia = document.getElementById("distancia").value;
     const tiempo = document.getElementById("tiempo").value;
     const velocidad = document.getElementById("velocidad").value;
 
-    if(!isNaN(distancia) && !isNaN(tiempo) && !isNaN(velocidad)){
+    if (!isNaN(distancia) && !isNaN(tiempo) && !isNaN(velocidad)) {
         let resultado;
 
-        if(calculo=="velocidad"){
-            resultado = distancia/tiempo;
-            document.getElementById("resul").innerHTML = `La velocidad es:${resul} m/s`;
-        }else if(calculo=="tiempo"){
-            resultado = distancia/velocidad;
-            document.getElementById("resul").innerHTML = `El tiempo es:${resul} s`;
-        }else if(calculo=="distancia"){
-            resultado = velocidad*tiempo;
-            document.getElementById("resul").innerHTML = `La velocidad es:${resul} m`;
-        }else{
-            alert('Por favor, ingresa los valores numéricos para velocidad, tiempo y distancia');
-            if (isNaN(distancia)) {
-                document.getElementById('distancia').value = '';
+        if (calculo == "velocidad") {
+            if (distancia === "" || tiempo === "") {
+                alert("Por favor, ingresa los valores de distancia y tiempo.");
+            } else {
+                resultado = distancia / tiempo;
+                document.getElementById("resul").value = `La velocidad es: ${resultado} m/s`;
             }
-
-            if (isNaN(velocidad)) {
-                document.getElementById('velocidad').value = '';
+        } else if (calculo == "tiempo") {
+            if (distancia === "" || velocidad === "") {
+                alert("Por favor, ingresa los valores de distancia y velocidad.");
+            } else {
+                resultado = distancia / velocidad;
+                document.getElementById("resul").value = `El tiempo es: ${resultado} s`;
             }
-
-            if (isNaN(tiempo)) {
-                document.getElementById('tiempo').value = '';
+        } else if (calculo == "distancia") {
+            if (velocidad === "" || tiempo === "") {
+                alert("Por favor, ingresa los valores de velocidad y tiempo.");
+            } else {
+                resultado = velocidad * tiempo;
+                document.getElementById("resul").value = `La distancia es: ${resultado} m`;
             }
+        } else {
+            alert("Por favor, elige una opción válida.");
         }
+    } else {
+        alert("Por favor, ingresa valores numéricos para velocidad, tiempo y distancia.");
     }
 }

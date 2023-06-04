@@ -1,37 +1,116 @@
 
 h1 {
     color: #dd5034;
-    font-size: 90px;
+    font-size: 40px;
     text-align: center;
 }
 body{
     background-color: #ee8f6d;
     font-family: 'genos', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 section {
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 10px;
+    display: inline;
+}
+img#principal {
+    width: 100px;
+    height: 100px;
+    background-color: #dd5034;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+section p {
+    margin-bottom: 10px;
+}
+img#principal {
+    background-image: url("imagenes/logo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+section#inicio {
+    text-align: center;
+}
+
+section#inicio img {
+    width: 200px;
+    height: 200px;
 }
 div.especial h4{
     font-weight: lighter;
     color: #dd5034;
+    margin-bottom: 10px;
 }
 
-a:link {
-    color: white;
-}
-
+a:link,
 a:visited {
     color: white;
+    text-decoration: none;
 }
 
-a:active {
+a:hover {
     font-weight: bold;
 }
 
-#principal {
-    width: 80px;
-    float: left;
-    border-radius: 50%;
-    margin: 20px;
+form#queCalculamosHoy {
+    text-align: center;
+    margin-top: 20px;
 }
+
+form#queCalculamosHoy label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form#queCalculamosHoy input[type="number"],
+form#queCalculamosHoy select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+form#queCalculamosHoy button {
+    padding: 10px 20px;
+    background-color: #dd5034;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form#queCalculamosHoy p:last-child {
+    margin-top: 20px;
+}
+
+form#queCalculamosHoy label[for="resul"] {
+    margin-right: 10px;
+}
+
+
