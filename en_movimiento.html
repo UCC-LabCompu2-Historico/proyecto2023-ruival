@@ -30,7 +30,7 @@
     <form id="queCalculamosHoy">
         <label for="calcular">Quiero calcular:</label>
         <p>
-            <select id="calcular">
+            <select id="calcular" onchange="deshabilitarCampos()">
                 <option value="distancia">Distancia</option>
                 <option value="tiempo">Tiempo</option>
                 <option value="velocidad">Velocidad</option>
@@ -50,7 +50,7 @@
         </p>
 
         <p>
-            <button type="button" onclick="setInterval(animarAuto, 10); calcular()">Calcular</button>
+            <button type="button" onclick="auto(); calcularMRU(this.id, this.value)">Calcular</button>
         </p>
         <p>
             El resultado es
