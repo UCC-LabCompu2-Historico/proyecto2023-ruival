@@ -1,16 +1,42 @@
 /**
  * Calcula la velocidad, distancia o tiempo del MRU.
- * @param
- * @param
+ * @param {string} id de los inputs de velocidad, tiempo, y distancia
+ * @param {number} valor de velocidad, tiempo y distancia
  * @return {number} El valor de la velocidad, distancia o tiempo calculado.
  */
-function calcular() {
-    const cal = document.getElementById("queCalculamosHoy").value;
+function calcular(id, valor) {
+    const cal = document.getElementById("calcular").value;
     const dis = document.getElementById("distancia");
     const tie = document.getElementById("tiempo");
-    const vel = document.getElementById("velocidad").value;
+    const vel = document.getElementById("velocidad");
+    let resultado;
 
-    if (!isNaN(dis.value) && !isNaN(tie.value) && !isNaN(vel)) {
+    if (isNaN(valor)) {
+        alert("Se agregó un valor inválido: " + id);
+        dis.value = "";
+        tie.value = "";
+        vel.value = "";
+    } else if (!isNaN(valor)) {
+        if (cal === "velocidad") {
+            vel.disabled = true;
+            resultado = dis.value / tie.value;
+        }
+        if (cal === "tiempo") {
+            tie.disabled = true;
+            resultado = dis.value / vel.value;
+        }
+        if (cal === "distancia") {
+            dis.disabled = true;
+            resultado = vel.value * tie.value;
+        }
+    }
+
+    document.getElementById("resul").innerHTML = "El resultado es: " + resultado;
+}
+
+
+    /**
+    if (!isNaN(dis.value) && !isNaN(tie.value) && !isNaN(vel.value)) {
         let resultado;
 
         if (cal === "velocidad") {
@@ -45,9 +71,8 @@ function calcular() {
     }
 }
 
-
+*/
 let x = 0;
-const dx = 2;
 
 function animarAuto() {
     const canvas = document.getElementById("myCanvas");
@@ -57,11 +82,12 @@ function animarAuto() {
     img.src = "imagenes/auto.png";
 
     img.onload = function () {
-        ctx.drawImage(img, 100, 100);
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas en cada cuadro de animación
+        ctx.drawImage(img, x, 100);
     };
 
-    x += dx;
 }
+
 
 
 
