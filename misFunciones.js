@@ -1,9 +1,9 @@
 /**
- * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
- * @return Valor que retorna
+ * Calculo de MRU de velocidad, tiempo y distancia
+ * @method calcular
+ * @param {string}  id - de los inputs de velocidad, distancia y tiempo
+ * @param {number} valor - de velocidad, distancia y tiempo
+ * @return {number} valor - de velocidad, distancia o tiempo
  */
 function calcular() {
     const calculo = document.getElementById("calcular").value;

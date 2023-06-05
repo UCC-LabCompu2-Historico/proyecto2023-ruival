@@ -8,7 +8,7 @@
     <meta content="velocidad, tiempo, distancia, movimiento, constante" name="Palabras-principales">
     <link rel="stylesheet" href="miEstilo.css" type="text/css">
     <link rel="shortcut icon" href="imagenes/favicon.jpg">
-    <meta content="velocidad - tiempo - espcio" name="Encavezado">
+    <meta content="velocidad - tiempo - espacio" name="Encavezado">
     <link href="https://fonts.googleapis.com/css2?family=Genos:ital@1&display=swap" rel="stylesheet">
     <script type="text/javascript" src="misFunciones.js"></script>
 </head>
@@ -50,14 +50,14 @@
         </p>
 
         <p>
-            <button onclick="calcular()">Calcular</button>
+            <button type="button" onclick="calcular()">Calcular</button>
         </p>
         <p>
             El resultado es
             <label for="resul"></label> <input id="resul" type="text" name="inp_resul" disabled>
         </p>
     </form>
-    <canvas id="img_enmovimiento" id="myCanvas" class="move" width="1000px" height="500px">
+    <canvas id="myCanvas" class="move" width="1000px" height="500px">
         El navegador no soporta canvas
     </canvas>
 </section>
