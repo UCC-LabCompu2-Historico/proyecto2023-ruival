@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
+button:active{
+    background-color: #e7744c;
+}
 
 h1 {
     color: #dd5034;

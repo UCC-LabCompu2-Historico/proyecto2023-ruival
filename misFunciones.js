@@ -1,12 +1,11 @@
 /**
- * Calculo de MRU de velocidad, tiempo y distancia
- * @method calcular
- * @param {string}  id - de los inputs de velocidad, distancia y tiempo
- * @param {number} valor - de velocidad, distancia y tiempo
- * @return {number} valor - de velocidad, distancia o tiempo
+ * Calcula la velocidad, distancia o tiempo del MRU.
+ * @param
+ * @param
+ * @return {number} El valor de la velocidad, distancia o tiempo calculado.
  */
 function calcular() {
-    const cal = document.getElementById("calcular").value;
+    const cal = document.getElementById("queCalculamosHoy").value;
     const dis = document.getElementById("distancia");
     const tie = document.getElementById("tiempo");
     const vel = document.getElementById("velocidad").value;
@@ -55,10 +54,10 @@ function animarAuto() {
     const ctx = canvas.getContext("2d");
 
     const img = new Image();
-    img.src = "images/auto.png";
+    img.src = "imagenes/auto.png";
 
     img.onload = function () {
-        ctx.drawImage(img, x, 100);
+        ctx.drawImage(img, 100, 100);
     };
 
     x += dx;
