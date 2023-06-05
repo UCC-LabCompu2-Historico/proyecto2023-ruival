@@ -6,50 +6,53 @@
  * @return {number} valor - de velocidad, distancia o tiempo
  */
 function calcular() {
-    const calculo = document.getElementById("calcular").value;
-    const distancia = document.getElementById("distancia").value;
-    const tiempo = document.getElementById("tiempo").value;
-    const velocidad = document.getElementById("velocidad").value;
+    const cal = document.getElementById("calcular").value;
+    const dis = document.getElementById("distancia");
+    const tie = document.getElementById("tiempo");
+    const vel = document.getElementById("velocidad").value;
 
-    if (!isNaN(distancia) && !isNaN(tiempo) && !isNaN(velocidad)) {
+    if (!isNaN(dis.value) && !isNaN(tie.value) && !isNaN(vel)) {
         let resultado;
 
-        if (calculo == "velocidad") {
-            if (distancia === "" || tiempo === "") {
-                alert("Por favor, ingresa los valores de distancia y tiempo.");
-            } else {
-                resultado = distancia / tiempo;
-                document.getElementById("resul").value = `La velocidad es: ${resultado} m/s`;
-            }
-        } else if (calculo == "tiempo") {
-            if (distancia === "" || velocidad === "") {
-                alert("Por favor, ingresa los valores de distancia y velocidad.");
-            } else {
-                resultado = distancia / velocidad;
-                document.getElementById("resul").value = `El tiempo es: ${resultado} s`;
-            }
-        } else if (calculo == "distancia") {
-            if (velocidad === "" || tiempo === "") {
-                alert("Por favor, ingresa los valores de velocidad y tiempo.");
-            } else {
-                resultado = velocidad * tiempo;
-                document.getElementById("resul").value = `La distancia es: ${resultado} m`;
-            }
+        if (cal === "velocidad") {
+            resultado = dis.value / tie.value;
+            document.getElementById("resul").innerHTML = `La velocidad es: ${resultado} m/s`;
+            dis.disabled = false;
+            tie.disabled = false;
+        } else if (cal === "tiempo") {
+            resultado = dis.value / vel;
+            document.getElementById("resul").innerHTML = `El tiempo es: ${resultado} s`;
+            dis.disabled = false;
+            tie.disabled = true;
+        } else if (cal === "distancia") {
+            resultado = vel* tie.value;
+            document.getElementById("resul").innerHTML = `La distancia es: ${resultado} m`;
+            dis.disabled = true;
+            tie.disabled = false;
         } else {
-            alert("Por favor, elige una opción válida.");
+            alert('Por favor, ingresa los valores numéricos para velocidad, tiempo y distancia');
+            if (isNaN(dis.value)) {
+                dis.value = '';
+            }
+
+            if (isNaN(vel)) {
+                document.getElementById('velocidad').value = '';
+            }
+
+            if (isNaN(tie.value)) {
+                tie.value = '';
+            }
         }
-    } else {
-        alert("Por favor, ingresa valores numéricos para velocidad, tiempo y distancia.");
     }
 }
 
+
 let x = 0;
 const dx = 2;
+
 function animarAuto() {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
-
-    canvas.width = canvas.width;
 
     const img = new Image();
     img.src = "images/auto.png";
@@ -58,8 +61,8 @@ function animarAuto() {
         ctx.drawImage(img, x, 100);
     };
 
-    if (x > canvas.width) {
-        x = 0;
-    }
     x += dx;
 }
+
+
+
