@@ -4,7 +4,7 @@
  * @param {number} valor de velocidad, tiempo y distancia
  * @return {number} El valor de la velocidad, distancia o tiempo calculado.
  */
-function calcularMRU() {
+function calcularMRU(id,valor) {
     const cal = document.getElementById("calcular").value;
     const dis = document.getElementById("distancia");
     const tie = document.getElementById("tiempo");
@@ -28,6 +28,12 @@ function calcularMRU() {
     }
 }
 
+/**
+ * Corrobora que el usuario ingrese un número.
+ * @param {string} input de lo que ingresa el usuario en velocidad, tiempo y distancia
+ * @param
+ * @return {alert} Notifica si lo que ingresó no es un número
+ */
 function validarCampo(input) {
     const valor = input.value;
 
@@ -37,6 +43,12 @@ function validarCampo(input) {
     }
 }
 
+/**
+ * Deshabilita el campo de la opción que ingrese el usuario, para que no ingrese ningun valor
+ * @param
+ * @param
+ * @return {disabled} deshabilita el campo a calcular
+ */
 function deshabilitarCampos() {
     const cal = document.getElementById("calcular").value;
     const dis = document.getElementById("distancia");
@@ -48,6 +60,12 @@ function deshabilitarCampos() {
     vel.disabled = cal === "velocidad";
 }
 
+/**
+ * Imprime un canvas en pantalla cuando el usuario hace click en el boton calcular
+ * @param
+ * @param
+ * @return {canvas} La imagen que imprime en pantalla
+ */
 function auto() {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -61,4 +79,3 @@ function auto() {
     };
 }
 
-//Falta documentar las funciones y hacer la funcion para redondear el resultado
