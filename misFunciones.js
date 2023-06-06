@@ -35,13 +35,14 @@ function calcularMRU(id,valor) {
  * @return {alert} Notifica si lo que ingresó no es un número
  */
 function validarCampo(input) {
-    const valor = input.value;
+    const valor = parseFloat(input.value);
 
     if (isNaN(valor)) {
         alert("Se ingresó un valor inválido. Por favor, ingresa un número válido.");
-        input.value = "";
     }
 }
+
+
 
 /**
  * Deshabilita el campo de la opción que ingrese el usuario, para que no ingrese ningun valor
