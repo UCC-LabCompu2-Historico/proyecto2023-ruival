@@ -10,8 +10,12 @@ button:active{
 
 h1 {
     color: #dd5034;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
+}
+
+p{
+    font-size: 20px;
 }
 
 section {
@@ -20,6 +24,11 @@ section {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+#inicio {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -91,6 +100,7 @@ div.especial h4{
     font-weight: lighter;
     color: #dd5034;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 form#queCalculamosHoy {
     text-align: center;
