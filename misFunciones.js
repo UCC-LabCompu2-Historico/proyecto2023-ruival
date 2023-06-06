@@ -28,6 +28,14 @@ function calcularMRU() {
     }
 }
 
+function validarCampo(input) {
+    const valor = input.value;
+
+    if (isNaN(valor)) {
+        alert("Se ingresó un valor inválido. Por favor, ingresa un número válido.");
+        input.value = "";
+    }
+}
 
 function deshabilitarCampos() {
     const cal = document.getElementById("calcular").value;
@@ -51,6 +59,8 @@ function auto() {
 
     img.onload = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas en cada cuadro de animación
-        ctx.drawImage(img, x, 100);
+        ctx.drawImage(img, 390, 100);
     };
 }
+
+//Falta documentar las funciones y hacer la funcion para redondear el resultado
