@@ -18,11 +18,11 @@ function calcularMRU() {
         vel.value = "";
     } else {
         if (cal === "velocidad") {
-            resultado = dis.value / tie.value;
+            resultado = Math.round((dis.value / tie.value)*100)/100;
         } else if (cal === "tiempo") {
-            resultado = dis.value / vel.value;
+            resultado = Math.round((dis.value / vel.value)*100)/100;
         } else if (cal === "distancia") {
-            resultado = vel.value * tie.value;
+            resultado = Math.round((vel.value * tie.value)*100)/100;
         }
         document.getElementById("resul").value = "El resultado es: " + resultado;
     }
@@ -48,8 +48,6 @@ function deshabilitarCampos() {
     vel.disabled = cal === "velocidad";
 }
 
-let x = 0;
-
 function auto() {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -59,7 +57,7 @@ function auto() {
 
     img.onload = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas en cada cuadro de animación
-        ctx.drawImage(img, 390, 100);
+        ctx.drawImage(img, 400, 100);
     };
 }
 
