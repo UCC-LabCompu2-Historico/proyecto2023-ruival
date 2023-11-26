@@ -13,9 +13,9 @@ function calcularMRU(id,valor) {
 
     if (isNaN(dis.value) || isNaN(tie.value) || isNaN(vel.value)) {
         alert("Se agregó un valor inválido. Por favor, ingresa números válidos.");
-        dis.value = "";
-        tie.value = "";
-        vel.value = "";
+        document.getElementById("distancia").value = "";
+        document.getElementById("tiempo").value = "";
+        document.getElementById("velocidad").value = "";
     } else {
         if (cal === "velocidad") {
             resultado = Math.round((dis.value / tie.value)*100)/100;
@@ -24,32 +24,32 @@ function calcularMRU(id,valor) {
         } else if (cal === "distancia") {
             resultado = Math.round((vel.value * tie.value)*100)/100;
         }
-        document.getElementById("resul").value = "El resultado es: " + resultado;
+        document.getElementById("resul").value = "El resultado es: " + resultado + "m/s";
     }
 }
 
 /**
- * Corrobora que el usuario ingrese un número.
- * @param {string} input de lo que ingresa el usuario en velocidad, tiempo y distancia
- * @param
- * @return {alert} Notifica si lo que ingresó no es un número
+ * Verifica que el usuario ingrese un número en un campo específico.
+ * @param {HTMLInputElement} input - Elemento de entrada donde el usuario ingresa datos (velocidad, tiempo, o distancia).
+ * @return {void} - Muestra una alerta si lo ingresado no es un número válido.
  */
+
 function validarCampo(input) {
     const valor = parseFloat(input.value);
 
     if (isNaN(valor)) {
         alert("Se ingresó un valor inválido. Por favor, ingresa un número válido.");
+        imput.value = " ";
     }
 }
 
 
 
 /**
- * Deshabilita el campo de la opción que ingrese el usuario, para que no ingrese ningun valor
- * @param
- * @param
- * @return {disabled} deshabilita el campo a calcular
+ * Deshabilita el campo correspondiente (distancia, tiempo, o velocidad) según la opción seleccionada por el usuario.
+ * @return {void} - No devuelve ningún valor, simplemente deshabilita el campo a calcular.
  */
+
 function deshabilitarCampos() {
     const cal = document.getElementById("calcular").value;
     const dis = document.getElementById("distancia");
@@ -62,11 +62,10 @@ function deshabilitarCampos() {
 }
 
 /**
- * Imprime un canvas en pantalla cuando el usuario hace click en el boton calcular
- * @param
- * @param
- * @return {canvas} La imagen que imprime en pantalla
+ * Dibuja una imagen en un canvas en pantalla cuando el usuario hace clic en el botón de calcular.
+ * @return {void} - No devuelve ningún valor, simplemente muestra la imagen en el canvas.
  */
+
 function auto() {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
