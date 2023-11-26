@@ -26,8 +26,13 @@ function calcularMRU(id,valor) {
             unidad = "s";
         } else if (cal === "distancia") {
             resultado = Math.round((vel.value * tie.value)*100)/100;
+            unidad = "m";
         }
-        document.getElementById("resul").value = "El resultado es: " + resultado + "m/s";
+        document.getElementById("resul").value = "El resultado es: " + resultado + " " + unidad;
+
+        document.getElementById("distancia").value = "";
+        document.getElementById("tiempo").value = "";
+        document.getElementById("velocidad").value = "";
     }
 }
 
