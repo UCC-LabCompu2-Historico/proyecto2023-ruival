@@ -9,7 +9,7 @@ button:active{
 }
 
 h1 {
-    color: #dd5034;
+    color: white;
     font-size: 50px;
     text-align: center;
 }
@@ -133,6 +133,32 @@ form#queCalculamosHoy p:last-child {
 
 form#queCalculamosHoy label[for="resul"] {
     margin-right: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dd5034;
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: #dd5034;
 }
 
 
