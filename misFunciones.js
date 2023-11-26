@@ -10,6 +10,7 @@ function calcularMRU(id,valor) {
     const tie = document.getElementById("tiempo");
     const vel = document.getElementById("velocidad");
     let resultado;
+    let unidad;
 
     if (isNaN(dis.value) || isNaN(tie.value) || isNaN(vel.value)) {
         alert("Se agregó un valor inválido. Por favor, ingresa números válidos.");
@@ -19,8 +20,10 @@ function calcularMRU(id,valor) {
     } else {
         if (cal === "velocidad") {
             resultado = Math.round((dis.value / tie.value)*100)/100;
+            unidad = "m/s";
         } else if (cal === "tiempo") {
             resultado = Math.round((dis.value / vel.value)*100)/100;
+            unidad = "s";
         } else if (cal === "distancia") {
             resultado = Math.round((vel.value * tie.value)*100)/100;
         }
