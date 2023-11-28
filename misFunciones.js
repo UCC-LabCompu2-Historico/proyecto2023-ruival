@@ -1,4 +1,29 @@
 /**
+ * Dibuja una imagen en un canvas en pantalla cuando el usuario hace clic en el botón de calcular.
+ * @return {void} - No devuelve ningún valor, simplemente muestra la imagen en el canvas.
+ */
+
+x = 0;
+dx = 2;
+function crearAuto(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+
+    var img = new Image();
+    img.src = "imagenes/auto.png";
+
+    img.onload = function(){
+        ctx.drawImage(img, x, 100);
+    }
+    if(x>canvas.width){
+        x = 0;
+    }
+    x+=dx;
+}
+
+/**
  * Calcula la velocidad, distancia o tiempo del MRU.
  * @param {string} id de los inputs de velocidad, tiempo, y distancia
  * @param {number} valor de velocidad, tiempo y distancia
@@ -29,6 +54,9 @@ function calcularMRU(id,valor) {
             unidad = "m";
         }
         document.getElementById("resul").value = "El resultado es: " + resultado + " " + unidad;
+
+        const canvas = document.getElementById("myCanvas");
+        crearAuto(canvas);
 
         document.getElementById("distancia").value = "";
         document.getElementById("tiempo").value = "";
@@ -69,21 +97,4 @@ function deshabilitarCampos() {
     vel.disabled = cal === "velocidad";
 }
 
-/**
- * Dibuja una imagen en un canvas en pantalla cuando el usuario hace clic en el botón de calcular.
- * @return {void} - No devuelve ningún valor, simplemente muestra la imagen en el canvas.
- */
-
-function auto() {
-    const canvas = document.getElementById("myCanvas");
-    const ctx = canvas.getContext("2d");
-
-    const img = new Image();
-    img.src = "imagenes/auto.png";
-
-    img.onload = function () {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas en cada cuadro de animación
-        ctx.drawImage(img, 400, 100);
-    };
-}
 
