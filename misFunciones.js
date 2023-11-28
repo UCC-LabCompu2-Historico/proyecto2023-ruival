@@ -1,5 +1,5 @@
 /**
- * Dibuja una imagen en un canvas en pantalla cuando el usuario hace clic en el botón de calcular.
+ * Dibuja la animación de un auto en canvas cuando el usuario hace click en calcular.
  * @return {void} - No devuelve ningún valor, simplemente muestra la imagen en el canvas.
  */
 
